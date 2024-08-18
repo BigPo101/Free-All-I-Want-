@@ -48,6 +48,7 @@ h1 {
 .media-player {
     margin-top: 30px;
     position: relative;
+    display: inline-block; /* Ensures the glow only covers the player */
 }
 
 #mediaPlayer {
@@ -55,6 +56,7 @@ h1 {
     max-width: 100%;
     border-radius: 10px;
     background-color: #000;
+    position: relative;
     z-index: 1;
 }
 
@@ -67,14 +69,14 @@ h1 {
 .media-player::before {
     content: '';
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
     background: linear-gradient(45deg, #ff1e56, #ffac41, #1e90ff, #ff1e56);
     background-size: 400% 400%;
-    border-radius: 15px;
-    z-index: 0;
+    z-index: -1; /* Behind the video player */
     filter: blur(15px);
     animation: glowing 15s ease infinite;
 }
