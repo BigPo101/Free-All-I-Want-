@@ -9,13 +9,19 @@
 <body>
     <div class="container">
         <h1>Free All I Want - Media Player</h1>
-        <div class="media-list">
-            <h2>Select Media:</h2>
-            <ul id="mediaList">
-                <li onclick="playMedia('21C73C72-EF33-447F-93B9-CA9F362B5A50.medium.MP4', 'Episode 1')">Episode 1</li>
-                <li onclick="playMedia('media2.mp4', 'Title 2')">Title 2</li>
-                <li onclick="playMedia('media3.mp4', 'Title 3')">Title 3</li>
-            </ul>
+        <div class="media-grid">
+            <div class="media-card" onclick="playMedia('21C73C72-EF33-447F-93B9-CA9F362B5A50.medium.MP4', 'Episode 1)">
+                <div class="media-thumbnail">🎬</div>
+                <div class="media-title">Episode 1</div>
+            </div>
+            <div class="media-card" onclick="playMedia('media2.mp4', 'Title 2')">
+                <div class="media-thumbnail">🎬</div>
+                <div class="media-title">Title 2</div>
+            </div>
+            <div class="media-card" onclick="playMedia('media3.mp4', 'Title 3')">
+                <div class="media-thumbnail">🎬</div>
+                <div class="media-title">Title 3</div>
+            </div>
         </div>
         <div class="media-player">
             <h2 id="mediaTitle">Select a media to play</h2>
@@ -28,3 +34,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
