@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free All I Want</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Free All I Want - Media Player</h1>
+        <div class="media-list">
+            <h2>Select Media:</h2>
+            <ul id="mediaList">
+                <li onclick="playMedia('media1.mp4', 'Title 1')">Title 1</li>
+                <li onclick="playMedia('media2.mp4', 'Title 2')">Title 2</li>
+                <li onclick="playMedia('media3.mp4', 'Title 3')">Title 3</li>
+            </ul>
+        </div>
+        <div class="media-player">
+            <h2 id="mediaTitle">Select a media to play</h2>
+            <video id="mediaPlayer" controls>
+                <source id="mediaSource" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
