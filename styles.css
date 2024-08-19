@@ -73,7 +73,7 @@ header p {
     position: relative;
     display: inline-block;
     border-radius: 10px;
-    overflow: visible; /* Allow the glow to extend outside the boundaries */
+    overflow: hidden; /* Hide overflow to ensure glow is outside the player */
 }
 
 #mediaPlayer {
@@ -93,14 +93,12 @@ header p {
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: inherit;
+    border-radius: 20px; /* Increased radius to ensure glow is outside */
     background: linear-gradient(45deg, #ff1e56, #ffac41, #1e90ff, #ff1e56);
     background-size: 400% 400%;
     z-index: -1;
-    filter: blur(20px);
+    filter: blur(25px); /* Increased blur for a more pronounced glow */
     animation: glowing 15s ease infinite;
-    padding: 10px; /* Ensure the glow spreads around the player */
-    box-sizing: border-box;
 }
 
 @keyframes glowing {
