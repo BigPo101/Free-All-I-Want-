@@ -37,28 +37,28 @@ header p {
     gap: 20px;
 }
 
+/* Remove link styling from media cards */
 .media-card {
-    background-color: #333;
-    padding: 30px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
 }
 
 .media-card:hover {
-    background-color: #555;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    color: #fff; /* Optional: Define a hover color */
 }
+
+/* Ensure the text inside the card inherits the correct styles */
+.media-title {
+    color: inherit; /* Inherit color from parent */
+    font-size: 1.5em;
+}
+
 
 .media-thumbnail {
     font-size: 4em;
     margin-bottom: 20px;
 }
 
-.media-title {
-    font-size: 1.5em;
-}
 .back-link {
     display: inline-block;
     margin-top: 20px;
