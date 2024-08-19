@@ -68,12 +68,13 @@ header p {
 }
 
 /* Media player styling with glowing effect */
+/* Media player styling with glowing effect */
 .media-player {
     margin-top: 30px;
     position: relative;
     display: inline-block; /* Ensures the glow only covers the player */
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible; /* Allow glow to show beyond the media player boundaries */
 }
 
 #mediaPlayer {
@@ -89,15 +90,15 @@ header p {
 .media-player::before {
     content: '';
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: 10px;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border-radius: 15px;
     background: linear-gradient(45deg, #ff1e56, #ffac41, #1e90ff, #ff1e56);
     background-size: 400% 400%;
     z-index: -1; /* Behind the video player */
-    filter: blur(15px);
+    filter: blur(20px); /* Increase blur for a more pronounced glow */
     animation: glowing 15s ease infinite;
 }
 
@@ -112,6 +113,7 @@ header p {
         background-position: 0% 50%;
     }
 }
+
 
 /* Footer styling */
 footer {
