@@ -1,3 +1,4 @@
+/* Basic body and container styling */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #1e1e1e;
@@ -13,6 +14,7 @@ body {
     padding: 20px;
 }
 
+/* Header styling */
 header {
     padding: 50px 0;
     background: linear-gradient(135deg, #ff1e56, #ffac41, #1e90ff);
@@ -31,47 +33,41 @@ header p {
     color: #f4f4f4;
 }
 
+/* Media grid styling */
 .media-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
-/* Remove link styling from media cards */
+/* Media card styling */
 .media-card {
+    background-color: #333;
+    padding: 30px 20px;
+    border-radius: 10px;
     text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit color from parent */
+    color: inherit; /* Inherit text color */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 .media-card:hover {
-    color: #fff; /* Optional: Define a hover color */
+    background-color: #555;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-/* Ensure the text inside the card inherits the correct styles */
-.media-title {
-    color: inherit; /* Inherit color from parent */
-    font-size: 1.5em;
-}
-
-
+/* Media thumbnail and title styling */
 .media-thumbnail {
     font-size: 4em;
     margin-bottom: 20px;
 }
 
-.back-link {
-    display: inline-block;
-    margin-top: 20px;
-    color: #ffac41;
-    text-decoration: none;
-    font-size: 1em;
+.media-title {
+    color: #fff; /* Ensure text color stays white */
+    font-size: 1.5em;
 }
 
-.back-link:hover {
-    text-decoration: underline;
-}
-
-
+/* Footer styling */
 footer {
     margin-top: 40px;
     padding: 20px;
@@ -84,30 +80,16 @@ footer p {
     font-size: 0.9em;
     color: #aaa;
 }
-/* Glowing Border Animation */
-.media-player::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #ff1e56, #ffac41, #1e90ff, #ff1e56);
-    background-size: 400% 400%;
-    z-index: -1; /* Behind the video player */
-    filter: blur(15px);
-    animation: glowing 15s ease infinite;
+
+/* Back link styling */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ffac41;
+    text-decoration: none;
+    font-size: 1em;
 }
 
-@keyframes glowing {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.back-link:hover {
+    text-decoration: underline;
 }
