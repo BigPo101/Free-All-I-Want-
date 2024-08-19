@@ -67,6 +67,52 @@ header p {
     font-size: 1.5em;
 }
 
+/* Media player styling with glowing effect */
+.media-player {
+    margin-top: 30px;
+    position: relative;
+    display: inline-block; /* Ensures the glow only covers the player */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#mediaPlayer {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    background-color: #000;
+    position: relative;
+    z-index: 1;
+}
+
+/* Glowing Border Animation */
+.media-player::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ff1e56, #ffac41, #1e90ff, #ff1e56);
+    background-size: 400% 400%;
+    z-index: -1; /* Behind the video player */
+    filter: blur(15px);
+    animation: glowing 15s ease infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* Footer styling */
 footer {
     margin-top: 40px;
