@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
     var mainContent = document.getElementById('mainContent');
 
     introVideo.onended = function() {
-        // Fade out the intro video and remove it
+        // Fade out the intro video with a scale-down effect
         introVideoContainer.classList.add('hidden');
         
-        // Show the main content after the video
+        // Show the main content with a delay to match the fade-out
         setTimeout(function() {
             mainContent.classList.remove('hidden');
             mainContent.classList.add('show');
