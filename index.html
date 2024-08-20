@@ -7,12 +7,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Full-Screen Intro Video -->
+    <div id="introVideoContainer" class="intro-video-container">
+        <video id="introVideo" class="intro-video" autoplay muted>
+            <source src="intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Main Content (Homepage) -->
+    <div id="mainContent" class="main-content hidden">
         <header>
-            <h1>Free All I Want</h1>
-            <p>Your one-stop destination for all your favorite media.</p>
+            <h1>Welcome to Free All I Want</h1>
+            <p>Your ultimate media player experience</p>
         </header>
-        
+        <div class="container">
+            <div class="media-grid">
+                        
         <section class="media-grid">
             <a href="episode1.html" class="media-card">
                 <div class="media-thumbnail">🎬</div>
@@ -27,10 +38,14 @@
                 <div class="media-title">Episode 3: Title 3</div>
             </a>
         </section>
-
-        <footer>
-            <p>© 2024 Free All I Want. All rights reserved.</p>
-        </footer>
+                <!-- Media cards go here -->
+            </div>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+
