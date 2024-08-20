@@ -6,7 +6,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling while the video is playing */
+    /* Remove the overflow property */
 }
 
 /* Intro video styling */
@@ -18,6 +18,7 @@ body {
     height: 100%;
     z-index: 10;
     background-color: black;
+    overflow: hidden; /* Keep overflow hidden only for the video container */
 }
 
 #introVideo {
@@ -35,7 +36,12 @@ body {
 .main-content {
     opacity: 0;
     transition: opacity 1s ease;
+    position: relative;
+    z-index: 1; /* Ensure it appears above the video */
 }
+
+/* Other styles remain the same as you provided */
+
 
 /* Other styles remain the same as you provided */
 /* Basic body and container styling */
